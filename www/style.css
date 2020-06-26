@@ -3,3 +3,14 @@ body {
   padding: 10px;
   background: #efefff;
 }
+
+.header {
+    display: inline-flex;
+}
+    .header.sign_log_in_btn {
+    }
+
+    .header.title {
+        text-align: center;
+        font: large;
+    }
