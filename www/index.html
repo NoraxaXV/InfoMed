@@ -1,85 +1,177 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
     <!-- VueJS development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
-    <title>Info Med: Get the information you need, now! </title>
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <title>Info Med: Get the information you need, now!</title>
+  </head>
+  <body>
+    <div id="app">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <span class="navbar-brand text-primary">InfoMed</span>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="/login" tabindex="-1" aria-disabled="true">Login (Work In Progress)</a>
-                </li>
-
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Enter a medication">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="button">Explore!</button>
-            </form>
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link disabled"
+                href="/login"
+                tabindex="-1"
+                aria-disabled="true"
+                >Login (Work In Progress)</a
+              >
+            </li>
+          </ul>
+          
+          <search-bar></search-bar>
         </div>
-    </nav>
-    <main role="main">
+      </nav>
+      <main role="main">
         <div class="jumbotron shadow-lg p-3 mb-5 bg-muted rounded">
-            <h1 class="title">Welcome To InfoMed</h1>
-            <p class="lead">Research the possiblities <i>before</i> you start. </p>
-            <p>Our Goal is to provide you with the info you need when choosing the right medication. <br> <b>Don't get caught by the unexpexted side effects. Search our database <i>now!</i></b> </p>
-            <hr>
-            <a class="btn btn-outline-success my-2 my-sm-0"  href="explore">Search Now!</a>
+          <h1 class="title">Welcome To InfoMed</h1>
+          <p class="lead">Research the possiblities <i>before</i> you start.</p>
+          <p>
+            Our Goal is to provide you with the info you need when choosing the
+            right medication. <br />
+            <b>
+              Don't get caught by the unexpexted side effects. Search our
+              database
+              <i>now!</i>
+            </b>
+          </p>
+          <hr />
+          <search-bar></search-bar>
+          </form>
         </div>
 
-        <hr>
-        
-        <div id="carouselExampleSlidesOnly" class="carousel slide bg-dark" data-ride="carousel">
-            <div class=" d-flex carousel-inner">
-                <div class="carousel-item active">
-                    <h2  class="d-block w-200 text-light text-center"> Benfit from real feedback provided by real people on medication </h2>
-                </div>
-                <div class="carousel-item">
-                    <h2 class="d-block w-200 text-light text-center"> Get the facts: we make sure our descriptions of medications are viewed by the experts </h2>
-                </div>
-                <div class="carousel-item">
-                    <h2 class="d-block w-200 text-light text-center"> Want to share your own experience? <wbr> We highly encourage you to post even a few sentences sharing your experience with that medication </h2>
-                </div>
+        <hr />
+
+        <div
+          id="carouselExampleSlidesOnly"
+          class="carousel slide bg-dark"
+          data-ride="carousel"
+        >
+          <div class=" d-flex carousel-inner">
+            <div class="carousel-item active">
+              <h2 class="d-block w-200 text-light text-center">
+                Benfit from real feedback provided by real people on medication
+              </h2>
             </div>
+            <div class="carousel-item">
+              <h2 class="d-block w-200 text-light text-center">
+                Get the facts: we make sure our descriptions of medications are
+                viewed by the experts
+              </h2>
+            </div>
+            <div class="carousel-item">
+              <h2 class="d-block w-200 text-light text-center">
+                Want to share your own experience? <wbr /> We highly encourage
+                you to post even a few sentences sharing your experience with
+                that medication
+              </h2>
+            </div>
+          </div>
         </div>
 
         <div class="container">
-            <div class="d-flex justify-content-around">
-                <div class="bg-light rounded">
-                    <h3>Test</h3>
-                    <p></p>
-                </div>
-                <div class="bg-light rounded">
-                    <h3>Test</h3>
-                </div>
+          <div class="d-flex justify-content-around">
+            <div class="bg-light rounded">
+              <h3>Test</h3>
+              <p></p>
             </div>
+            <div class="bg-light rounded">
+              <h3>Test</h3>
+            </div>
+          </div>
         </div>
-        <hr>
-    </main>
+        <hr />
+      </main>
+    </div>
     <footer>
-        <p>Site devoloped by <a href="https://github.com/RebornMaster/">RebornMaster</a> </p>
-        <p>Support the project on <a href="https://github.com/RebornMaster/InfoMed">Github</a></p>
+      <p>
+        Site devoloped by
+        <a href="https://github.com/RebornMaster/">RebornMaster</a>
+      </p>
+      <p>
+        Support the project on
+        <a href="https://github.com/RebornMaster/InfoMed">Github</a>
+      </p>
     </footer>
+    <script>
+      Vue.component("search-bar", {
+        data: function() {
+          return {
+            search_url: "/"
+          };
+        },
+        methods: {
+          updateSearchUrl: function(e) {
+            this.search_url = `explore/${e.target.value}`;
+          }
+        },
+        template: `<form id="navbar_search" class="form-inline my-2 my-lg-0">
+            <input
+              name="search"
+              @change= "updateSearchUrl"
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Enter a medication"
+            />
+            <a :href="search_url" class="btn btn-outline-success my-2 my-sm-0" type="button">
+              Explore!
+            </a>
+          </form>`
+      });
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-</body>
+      var app = new Vue({
+        el: "#app"
+      });
+    </script>
+
+    <!-- Scripts for Bootstrap -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous">
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous">
+    </script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous">
+    </script>
+  </body>
 </html>
