@@ -16,46 +16,57 @@
     />
 
     <!-- VueJS development version, includes helpful console warnings -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
 
     <title>Info Med: Get the information you need, now!</title>
   </head>
   <body>
     <div id="app">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <span class="navbar-brand text-primary">InfoMed</span>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">Home</a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link disabled"
-                href="/login"
-                tabindex="-1"
-                aria-disabled="true"
-                >Login (Work In Progress)</a
-              >
-            </li>
-          </ul>
-          
-          <search-bar></search-bar>
-        </div>
-      </nav>
-      <main role="main">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <span class="navbar-brand text-primary">InfoMed</span>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link disabled"
+                    href="/login"
+                    tabindex="-1"
+                    aria-disabled="true"
+                    >Login (Work In Progress)</a
+                  >
+                </li>
+              </ul>
+              
+              <form id="navbar_search" class="form-inline my-2 my-lg-0">
+                <input
+                   
+                  onchange = "updateSearchUrl('navbar_search_link', this.value)"
+                  class="form-control mr-sm-2"
+                  type="text"
+                  placeholder="Enter a medication"
+                />
+                <a id="navbar_search_link" href="/" class="btn btn-outline-success my-2 my-sm-0" type="button">
+                  Explore!
+                </a>
+              </form>
+            </div>
+          </nav>
+          <main role="main">
         <div class="jumbotron shadow-lg p-3 mb-5 bg-muted rounded">
           <h1 class="title">Welcome To InfoMed</h1>
           <p class="lead">Research the possiblities <i>before</i> you start.</p>
@@ -69,7 +80,17 @@
             </b>
           </p>
           <hr />
-          <search-bar></search-bar>
+          <form id="jumbotron_search" class="form-inline my-2 my-lg-0">
+            <input 
+              onchange = "updateSearchUrl('jumbotron_search_link', this.value)"
+              class="form-control mr-sm-2"
+              type="text"
+              placeholder="Enter a medication"
+            />
+            <a id='jumbotron_search_link' href="/" class="btn btn-outline-success my-2 my-sm-0" type="button">
+              Explore!
+            </a>
+          </form>
           </form>
         </div>
 
@@ -126,36 +147,8 @@
         <a href="https://github.com/RebornMaster/InfoMed">Github</a>
       </p>
     </footer>
-    <script>
-      Vue.component("search-bar", {
-        data: function() {
-          return {
-            search_url: "/"
-          };
-        },
-        methods: {
-          updateSearchUrl: function(e) {
-            this.search_url = `explore/${e.target.value}`;
-          }
-        },
-        template: `<form id="navbar_search" class="form-inline my-2 my-lg-0">
-            <input
-              name="search"
-              @change= "updateSearchUrl"
-              class="form-control mr-sm-2"
-              type="search"
-              placeholder="Enter a medication"
-            />
-            <a :href="search_url" class="btn btn-outline-success my-2 my-sm-0" type="button">
-              Explore!
-            </a>
-          </form>`
-      });
 
-      var app = new Vue({
-        el: "#app"
-      });
-    </script>
+    <script src="/client_index.js"></script>
 
     <!-- Scripts for Bootstrap -->
     <script

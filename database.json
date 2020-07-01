@@ -1,23 +1,65 @@
 [
   {
-    "name": "Tunvienor's Nectar"
+    "name": "Tunvienor's Nectar",
+    "description": 
+    "A cure made from the stalk of Fricai Andlat",
+    "comments": [
+      "Arya: This wonderful stuff saved from a deadly poison",
+      "Angela the Herbalist: I love finding this stuff: it always heals my patients."
+    ]
   },
   {
-    "name": "Gorgon's Tears"
+    "name": "Gorgon's Tears",
+    "description": 
+    "Although extremely difficult to obtain, this is a wondermaker on petrified people.",
+    "comments": [
+      "Prince Charming: This saved my best buddy after he was petrified, with no side effects."
+    ]
   },
   {
-    "name": "Midnight Tea"
+    "name": "Midnight Tea",
+    "description": 
+    "Used most frequently as a beverage by the night-watch to help keep them awake longer.",
+    "comments": [
+      "A Night Watch Guard: This stuff is SO helpful, I can't belive anyone could go without this stuff.",
+      "??? - DON'T DRINK THIS STUFF!!! YOU WILL NEVER BE ABLE TO GET A GOOD SLEEP FOR WEEKS!!!"
+    ]
   },
   {
-    "name": "Philosopher's Stone"
+    "name": "Philosopher's Stone",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non vulputate velit. Ut congue arcu faucibus vulputate facilisis. Proin tincidunt dolor nec gravida hendrerit.",
+    "comments":[
+      "In commodo, eros ut aliquam egestas, magna ipsum dapibus sem, vitae lacinia tortor lorem in nisi. Nam cursus porta turpis, vitae placerat dolor mattis ut.",
+      "Cras sit amet pulvinar eros, sed ultricies nisi. Nullam et sapien vel nunc ultricies facilisis."
+    ]
   },
   {
-    "name": "Dragon Blood Elixir"
+    "name": "Dragon Blood Elixir",
+    "description": "Vestibulum at urna malesuada, rutrum arcu sed, aliquam est. Aliquam sit amet ex tristique, elementum justo ac, consectetur metus. Suspendisse id turpis ac ligula sodales vehicula id id purus. Nunc scelerisque tristique tortor, et pulvinar mauris rhoncus sit amet. Aliquam vulputate, sem viverra tincidunt scelerisque, nibh sapien eleifend enim, et iaculis erat justo eu diam. Mauris convallis, quam quis pellentesque dignissim, quam sapien luctus est, eu dapibus purus lacus ut odio.",
+    "comments": [
+      "Cras sit amet pulvinar eros, sed ultricies nisi. Nullam et sapien vel nunc ultricies facilisis.",
+      "In commodo, eros ut aliquam egestas, magna ipsum dapibus sem, vitae lacinia tortor lorem in nisi. Nam cursus porta turpis, vitae placerat dolor mattis ut.",
+      "Nullam congue mi ante, ut luctus massa vehicula sit amet. Morbi fermentum urna at eros ultrices feugiat. Aenean a neque orci. Phasellus et finibus ligula.",
+      "Vivamus mattis tempus venenatis. Pellentesque sed venenatis ex. In sed ultricies nisl. Proin ipsum lectus, elementum at pretium vel, pellentesque sed nibh. Maecenas dictum et velit ut porttitor.",
+      "Nulla facilisi."
+    ]
   },
   {
-    "name": "Superior Health Potion"
+    "name": "Superior Health Potion",
+    "description": "Morbi hendrerit, metus et auctor feugiat, est sapien pellentesque ex, ut dictum neque arcu eu arcu.",
+    "comments":[
+      "In commodo, eros ut aliquam egestas, magna ipsum dapibus sem, vitae lacinia tortor lorem in nisi. Nam cursus porta turpis, vitae placerat dolor mattis ut.",
+      "Cras sit amet pulvinar eros, sed ultricies nisi. Nullam et sapien vel nunc ultricies facilisis.",
+      "Nulla facilisi."
+    ]
   },
   {
-    "name": "Draenic Health Tonic"
+    "name": "Draenic Health Tonic",
+    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non vulputate velit. Ut congue arcu faucibus vulputate facilisis. Proin tincidunt dolor nec gravida hendrerit.",
+    "comments": [
+      "Vivamus mattis tempus venenatis. Pellentesque sed venenatis ex. In sed ultricies nisl. Proin ipsum lectus, elementum at pretium vel, pellentesque sed nibh. Maecenas dictum et velit ut porttitor.",
+      "Nullam congue mi ante, ut luctus massa vehicula sit amet. Morbi fermentum urna at eros ultrices feugiat. Aenean a neque orci. Phasellus et finibus ligula.",
+      "Cras sit amet pulvinar eros, sed ultricies nisi. Nullam et sapien vel nunc ultricies facilisis."
+    ]
   }
 ]
