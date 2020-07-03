@@ -3,7 +3,7 @@ const fs = require("fs");
 const Vue = require("vue");
 
 const renderer = require("vue-server-renderer").createRenderer({
-	template: require("fs").readFileSync("./www/index.template.html", "utf-8")
+	template: require("fs").readFileSync("./public/index.template.html", "utf-8")
 });
 
 const app = express();
@@ -46,7 +46,7 @@ function updateDatabase(newDatabase){
 	});
 };
 
-app.use("/", express.static("www"));
+app.use("/", express.static("public"));
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
@@ -56,7 +56,7 @@ app.get("/explore", function(req, res){
 		res,
 		{ database: database, search_key: "Explore All" },
 		{ title: "InfoMed: Explore"},
-		"./www/explore/search.html"
+		"./public/explore/search.html"
 	);
 });
 
@@ -75,7 +75,7 @@ app.get("/explore/:key", function(req, res) {
 		res,
 		{ database: filteredData, search_key: req.params.key },
 		{ title: "InfoMed: Get the Info On " + req.params.key },
-		"./www/explore/search.html"
+		"./public/explore/search.html"
 	);
 });
 
@@ -86,7 +86,7 @@ app.get("/medicine/:key", function(req, res) {
     res, 
 		{medicine: medicine}, 
     {title: "InfoMed: "+req.params.key},
-    "./www/medicine/medicine.html"
+    "./public/medicine/medicine.html"
   );
 });
 
