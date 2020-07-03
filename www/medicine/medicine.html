@@ -18,7 +18,10 @@
 				<li class="nav-item active">
 					<a class="nav-link" href="/">Home</a>
 				</li>
-				<li class="nav-item">
+				<li class="nav-item active">
+						<a class="nav-link" href="/explore">Explore All</a>
+				</li>
+					<li class="nav-item">
 					<a
 						class="nav-link disabled"
 						href="/login"
@@ -30,7 +33,7 @@
 			</ul>
 
 			<form id="navbar_search" class="form-inline my-2 my-lg-0">
-				<input 
+				<input
 					onchange="updateSearchUrl('navbar_search_link', this.value)"
 					class="form-control mr-sm-2"
 					type="text"
@@ -42,26 +45,57 @@
 					class="btn btn-outline-success my-2 my-sm-0"
 					type="button"
 				>
-					Explore!
+					Search!
 				</a>
 			</form>
 		</div>
 	</nav>
-  
-  <div class = "jumbotron container-fluid">
-    <h3>{{medicine.name}}</h3>
-    <p>{{medicine.description}}</p>
-  </div>
-  
-  <div class = "container">
-    <h4>Comments</h4>
-    <div class = "row" v-for="comment in medicine.comments" :key="medicine.comment">
-      <div class = "col-6">
-      {{comment}}
-      </div>
-      <hr>
-    </div>
-  </div>
 
-  <script src="../client_index.js"></script>
+	<div class="jumbotron container-fluid">
+		<h3>{{medicine.name}}</h3>
+		<p>{{medicine.description}}</p>
+	</div>
+
+	<div class="container">
+		<h4>Comments</h4>
+		<div
+			class="row"
+			v-for="comment in medicine.comments"
+			:key="medicine.comment"
+		>
+			<div class="col-6">
+				{{comment}}
+				<hr />
+			</div>
+		</div>
+		<form :action="'/medicine/'+medicine.name+'/comment'" method="POST">
+			<h5>Share your experience!</h5>
+			<div class="form-group">
+				<label for="name">Name: (Default is Anonymous)</label>
+				<input
+					class="form-control"
+					name="name"
+					id="name"
+					type="text"
+					placeholder="Enter your name"
+					value="Anonymous"
+				/>
+			</div>
+			<div class="form-group">
+				<label for="comment">Comment</label>
+				<textarea
+					name="text"
+					id="comment"
+					class="form-control"
+					rows="3"
+					placeholder="Want to share your experience? Type it here and click submit"
+				></textarea>
+			</div>
+
+			<button type="submit" class="btn btn-primary">Submit Comment</button>
+		</form>
+		<hr />
+	</div>
+
+	<script src="../script.js"></script>
 </div>

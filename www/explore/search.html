@@ -18,6 +18,9 @@
 				<li class="nav-item active">
 					<a class="nav-link" href="/">Home</a>
 				</li>
+				<li class="nav-item active">
+						<a class="nav-link" href="/explore">Explore All</a>
+				</li>
 				<li class="nav-item">
 					<a
 						class="nav-link disabled"
@@ -38,7 +41,7 @@
 					placeholder="Enter a medication"
 				/>
 				<a id="navbar_search_link" href="/" class="btn btn-outline-success my-2 my-sm-0" type="button">
-					Explore!
+					Search!
 				</a>
 			</form>
 	
@@ -47,12 +50,12 @@
 	<a href="/explore">Explore All</a>
 	<h4>Search Results For: {{search_key}} </h4>
 	<div class="container">
-		<ol class="row" v-for="(data, index) in database" :key="data.name">
+		<ul class="row" v-for="(data, index) in database" :key="data.name">
 			<li class="col-4">
 				<a :href="'/medicine/' + data.name">{{data.name}}</a>
 			</li>
-		</ol>
+		</ul>
 
 	</div>
-	<script src="../client_index.js"></script>
+	<script src="../script.js"></script>
 </div>
