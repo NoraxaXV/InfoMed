@@ -1,34 +1,33 @@
 [
   {
     "name": "Tunvienor's Nectar",
-    "description": 
-    "A cure made from the stalk of Fricai Andlat",
+    "description": "A cure made from the stalk of Fricai Andlat",
     "comments": [
       "Arya: This wonderful stuff saved from a deadly poison",
-      "Angela the Herbalist: I love finding this stuff: it always heals my patients."
+      "Angela the Herbalist: I love finding this stuff: it always heals my patients.",
+      "Anonymous - My wife was healed by this herb: no bad side effects."
     ]
   },
   {
     "name": "Gorgon's Tears",
-    "description": 
-    "Although extremely difficult to obtain, this is a wondermaker on petrified people.",
+    "description": "Although extremely difficult to obtain, this is a wondermaker on petrified people.",
     "comments": [
       "Prince Charming: This saved my best buddy after he was petrified, with no side effects."
     ]
   },
   {
     "name": "Midnight Tea",
-    "description": 
-    "Used most frequently as a beverage by the night-watch to help keep them awake longer.",
+    "description": "Used most frequently as a beverage by the night-watch to help keep them awake longer.",
     "comments": [
       "A Night Watch Guard: This stuff is SO helpful, I can't belive anyone could go without this stuff.",
-      "??? - DON'T DRINK THIS STUFF!!! YOU WILL NEVER BE ABLE TO GET A GOOD SLEEP FOR WEEKS!!!"
+      "??? - DON'T DRINK THIS STUFF!!! YOU WILL NEVER BE ABLE TO GET A GOOD SLEEP FOR WEEKS!!!",
+      "Huojin Defender: Lovely stuff, definitely I would say that this stuff will help any guard stay focused."
     ]
   },
   {
     "name": "Philosopher's Stone",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non vulputate velit. Ut congue arcu faucibus vulputate facilisis. Proin tincidunt dolor nec gravida hendrerit.",
-    "comments":[
+    "comments": [
       "In commodo, eros ut aliquam egestas, magna ipsum dapibus sem, vitae lacinia tortor lorem in nisi. Nam cursus porta turpis, vitae placerat dolor mattis ut.",
       "Cras sit amet pulvinar eros, sed ultricies nisi. Nullam et sapien vel nunc ultricies facilisis."
     ]
@@ -47,7 +46,7 @@
   {
     "name": "Superior Health Potion",
     "description": "Morbi hendrerit, metus et auctor feugiat, est sapien pellentesque ex, ut dictum neque arcu eu arcu.",
-    "comments":[
+    "comments": [
       "In commodo, eros ut aliquam egestas, magna ipsum dapibus sem, vitae lacinia tortor lorem in nisi. Nam cursus porta turpis, vitae placerat dolor mattis ut.",
       "Cras sit amet pulvinar eros, sed ultricies nisi. Nullam et sapien vel nunc ultricies facilisis.",
       "Nulla facilisi."
@@ -55,7 +54,7 @@
   },
   {
     "name": "Draenic Health Tonic",
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non vulputate velit. Ut congue arcu faucibus vulputate facilisis. Proin tincidunt dolor nec gravida hendrerit.",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non vulputate velit. Ut congue arcu faucibus vulputate facilisis. Proin tincidunt dolor nec gravida hendrerit.",
     "comments": [
       "Vivamus mattis tempus venenatis. Pellentesque sed venenatis ex. In sed ultricies nisl. Proin ipsum lectus, elementum at pretium vel, pellentesque sed nibh. Maecenas dictum et velit ut porttitor.",
       "Nullam congue mi ante, ut luctus massa vehicula sit amet. Morbi fermentum urna at eros ultrices feugiat. Aenean a neque orci. Phasellus et finibus ligula.",

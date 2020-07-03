@@ -27,7 +27,29 @@ function renderPage(res, data, context, template) {
 	});
 }
 
+function getMedicine(name){
+	let medicine = null;
+
+	database.forEach(function(x) {
+		if (x.name === name) {
+			medicine = x;
+			return;
+		}
+	});
+	return medicine;
+}
+
+function updateDatabase(newDatabase){
+	fs.writeFile('./database.json', JSON.stringify(newDatabase, undefined, 2), function(err){
+		if (err) throw err;
+		console.log("Wrote to database.json");
+	});
+};
+
 app.use("/", express.static("www"));
+
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
 
 app.get("/explore", function(req, res){
   renderPage(
@@ -58,22 +80,29 @@ app.get("/explore/:key", function(req, res) {
 });
 
 app.get("/medicine/:key", function(req, res) {
-	let medicine = null;
-
-	database.forEach(function(x) {
-		if (x.name === req.params.key) {
-			medicine = x;
-			return;
-		}
-	});
-	console.log(medicine);
+	let medicine = getMedicine(req.params.key);
 
 	renderPage(
     res, 
-    {medicine: medicine}, 
+		{medicine: medicine}, 
     {title: "InfoMed: "+req.params.key},
     "./www/medicine/medicine.html"
   );
+});
+
+app.post("/medicine/:key/comment", function(req, res){
+
+	console.log(`Comment incoming, by ${req.body.name} for ${req.params.key}: \n${req.body.text}`);
+	
+	let medicine = getMedicine(req.params.key);
+	let index = database.indexOf(medicine);
+
+	medicine.comments.push(req.body.name+" - "+req.body.text);
+	database[index] = medicine;
+
+	updateDatabase(database);
+
+	res.redirect("/medicine/"+req.params.key);
 });
 
 app.listen(3000, () => {
